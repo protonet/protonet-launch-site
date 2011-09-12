@@ -1,0 +1,155 @@
+@font-face {
+  font-family: protonet;
+  src: url('/stylesheets/fonts/Univers Light Condensed.ttf');
+} 
+
+html {
+  height: 100%;
+  background: #fff;
+}
+
+body {
+  color: #666;
+  background: #ddd;
+  background: -moz-linear-gradient(top, #eee, #aaa);
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#aaa));
+  font-size: 17px;
+  font-family: "Helvetica Neue", Helvetica, Arial, serif;
+  margin: 0;
+  min-height: 100%;
+}
+
+section {
+  margin: 0 auto;
+  padding-top: 100px;
+  width: 1100px;
+}
+
+footer {
+  margin: 0 auto;
+  width: 703px;
+  padding: 60px 0 0 397px;
+}
+
+section img {
+  float: left;
+  height: 434px;
+  margin: 0 40px 0 -250px;
+  width: 647px;
+}
+
+h1 {
+  font-family: protonet, Verdana, sans-serif;
+  font-size: 76px;
+  margin: 0;
+  padding-top: 48px;
+  text-shadow: -2px 2px 2px #fff;
+}
+
+p {
+  margin: 10px 0;
+}
+
+i {
+  color: #ff7f31;
+  font-style: normal;
+}
+
+address {
+  color: #888;
+  font-size: 12px;
+  font-style: normal;
+}
+
+address a {
+  text-decoration: none;
+  color: #666;
+}
+
+input[type=email] {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-color: #777 #aaa #aaa #777;
+  font-size: 16px;
+  padding: 7px;
+  width: 510px;
+}
+
+button {
+  background: #ddd;
+  background: -moz-linear-gradient(top,  #eee,  #ccc);
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+  -moz-border-radius: 12px;
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+  -webkit-border-radius: 12px;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  color: #333;
+  font-size: 16px;
+  margin-top: 10px;
+  padding: 8px 20px;
+  position: relative;
+  text-decoration: none;
+  text-shadow: #fff 0px 1px 1px;
+
+}
+
+button:focus {
+  color: #487bff;
+}
+
+button:active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#eee));
+  background: -moz-linear-gradient(top,  #ccc,  #eee);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  left: 1px;
+  top: 1px;
+}
+
+button:disabled {
+  background: #fff url(/images/icn_loading.gif) 12px center no-repeat;
+  padding-left: 40px;
+  cursor: default;
+  opacity: 0.6;
+}
+
+nav {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+nav a {
+  background: url(/images/spr_social_icons.png);
+  display: inline-block;
+  height: 20px;
+  opacity: 0.6;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 20px;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+nav a[href*="facebook"] {
+  background-position: -24px 0;
+}
+
+nav a[href*="tumblr"] {
+  background-position: -72px 0;
+}
+
+nav a[href*="rss"] {
+  background-position: -48px 0;
+}
