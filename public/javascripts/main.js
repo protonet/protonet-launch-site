@@ -21,7 +21,22 @@ $(function() {
       error: function() {
         appendAndFadeIn($("<p>", { text: "Please enter a valid e-mail address. Thanks!", "class": "error" }));
       }
-    })
+    });
+    event.preventDefault();
+  });
+  
+  $("[data-lightbox]").click(function(event) {
+    $("<section>",  { "class": "lightbox" })
+      .appendTo("body")
+      .click(function() { $(this).remove(); });
+    
+    $("<iframe>", { "frameborder": 0, src: $(this).data("lightbox") })
+      .appendTo(".lightbox");
+    
+    $(document).unbind("keydown").keydown(function(event) {
+      event.keyCode === 27 && $(".lightbox").remove();
+    });
+    
     event.preventDefault();
   });
 });
