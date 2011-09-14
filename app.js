@@ -5,8 +5,8 @@
 require.paths.unshift("/usr/local/lib/node_modules/");
 
 var express = require("express"),
-    fs      = require("fs"),
-    app     = module.exports = express.createServer();
+    app     = module.exports = express.createServer(),
+    log     = require("fs").createWriteStream(__dirname + "/db/emails.txt", { flags : "a" });
 
 // Configuration
 
@@ -43,17 +43,13 @@ app.post("/subscribe", function(req, res) {
     return res.json({}, 417);
   }
   
-  fs.open(__dirname + "/db/emails.txt", "a", 777, function(e, id) {
-    fs.write(id, email + "\n", null, "utf8", function(){
-      fs.close(id);
-      res.json({}, 200);
-    });
-  });
+  log.write(email + "\n");
+  return res.json({}, 200);
 });
 
 app.get("/rss", function(req, res) {
   res.redirect("http://protonet.tumblr.com/rss");
 });
 
-app.listen(app.settings.env === "production" ? 80 : 3000);
+app.listen(app.settings.env === "production" ? 80 : 3001);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
