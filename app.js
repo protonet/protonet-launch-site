@@ -51,7 +51,7 @@ app.post("/subscribe", function(req, res) {
   }
   
   log.write(email + "\n");
-  spawn("wget" , ["http://simple-mist-848.heroku.com/new-subscriber?email=secret_for_now"]);
+  spawn("wget" , ["http://simple-mist-848.heroku.com/new-subscriber?email=secret_for_now", "-O", "-"]);
   return res.json({}, 200);
 });
 
