@@ -1,0 +1,19 @@
+h1. protonet "coming soon" site
+
+Located at "protonet.info":http://protonet.info
+
+h2. Requirements
+
+* "node.js":http://nodejs.org
+* "Node Package Manager (npm)":http://npmjs.org
+
+Install all required node packages via
+<pre><code>npm install</code></pre>
+
+h2. Start the server:
+
+*Development*
+<pre><code>node app.js</code></pre>
+
+*Production*
+<pre><code>NODE_ENV=production node app.js > node.log &</code></pre>

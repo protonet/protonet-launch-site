@@ -1,22 +1,22 @@
-
 /**
  * Module dependencies.
  */
 require.paths.unshift("/usr/local/lib/node_modules/");
 
 var express = require("express"),
+    gzippo  = require("gzippo"),
     app     = module.exports = express.createServer(),
     log     = require("fs").createWriteStream(__dirname + "/db/emails.txt", { flags : "a" });
 
-// Configuration
-
+/**
+ * Configuration
+ */
 app.configure(function(){
   app.set("views", __dirname + "/views");
   app.set("view engine", "ejs");
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  app.use(express.static(__dirname + "/public"));
 });
 
 app.configure("development", function(){
@@ -24,10 +24,13 @@ app.configure("development", function(){
 });
 
 app.configure("production", function(){
-  app.use(express.errorHandler()); 
+  app.use(gzippo.staticGzip(__dirname + '/public'));
+  app.use(express.errorHandler());
 });
 
-// Routes
+/**
+ * Routes
+ */
 app.get("/", function(req, res) {
   res.render("index");
 });
@@ -39,6 +42,8 @@ app.post("/subscribe", function(req, res) {
   
   var email = req.body.email,
       valid = /^.+?@.+\.\w{2,}$/.test(email);
+  
+  console.log("Saving email: " + email);
   if (!valid) {
     return res.json({}, 417);
   }

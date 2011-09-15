@@ -12,13 +12,12 @@ $(function() {
         $form.find("input, button").attr("disabled", "disabled");
         $form.find(".success, .error").remove();
       },
-      complete: function() {
-        $form.find("input, button").removeAttr("disabled");
-      },
       success: function() {
+        $form.find("button").removeAttr("disabled");
         appendAndFadeIn($("<p>", { text: "Thanks for subscribing. We'll keep you informed!", "class": "success" }));
       },
       error: function() {
+        $form.find("input, button").removeAttr("disabled");
         appendAndFadeIn($("<p>", { text: "Please enter a valid e-mail address. Thanks!", "class": "error" }));
       }
     });

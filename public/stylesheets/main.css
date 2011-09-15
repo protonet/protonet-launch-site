@@ -122,6 +122,11 @@ button:disabled {
   padding-left: 40px;
 }
 
+input:disabled {
+  color: #999;
+  background: #eee;
+}
+
 nav {
   position: absolute;
   top: 12px;
@@ -142,19 +147,19 @@ nav a:hover {
   opacity: 1;
 }
 
-nav a[href*="facebook"] {
+nav a[href*=facebook] {
   background-position: -24px 0;
 }
 
-nav a[href*="tumblr"] {
+nav a[href*=tumblr] {
   background-position: -72px 0;
 }
 
-nav a[href*="rss"] {
+nav a[href*=rss] {
   background-position: -48px 0;
 }
 
-nav a[href*="github"] {
+nav a[href*=github] {
   background-position: -98px 0;
 }
 
@@ -176,10 +181,12 @@ li a {
   -moz-box-shadow: -2px 2px 2px #666;
   box-shadow: -2px 2px 2px #666;
   border: 1px solid #eee;
-  background: url(/images/spr_video_thumbs.jpg);
+  background: #000 url(/images/spr_video_thumbs.jpg) no-repeat;
   display: inline-block;
-  position: relative;
   height: 100px;
+  overflow: hidden;
+  position: relative;
+  text-indent: -9999px;
   width: 133px;
 }
 
@@ -205,6 +212,10 @@ li a:active {
   box-shadow: -1px 1px 1px #666;
   left: -1px;
   bottom: -1px;
+}
+
+li a[href*="29049923"] {
+  background-position: -133px 0;
 }
 
 .error {

@@ -3,7 +3,8 @@
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
-      "express": "2.4.6"
+      "gzippo": "0.0.5"
+    , "express": "2.4.6"
     , "ejs": ">= 0.4.3"
   }
 }
