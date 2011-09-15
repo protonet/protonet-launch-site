@@ -16,4 +16,4 @@ h2. Start the server:
 <pre><code>node app.js</code></pre>
 
 *Production*
-<pre><code>NODE_ENV=production node app.js > node.log &</code></pre>
+<pre><code>NODE_ENV=production nohup node app.js &</code></pre>
