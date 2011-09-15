@@ -6,7 +6,8 @@ require.paths.unshift("/usr/local/lib/node_modules/");
 var express = require("express"),
     gzippo  = require("gzippo"),
     app     = module.exports = express.createServer(),
-    log     = require("fs").createWriteStream(__dirname + "/db/emails.txt", { flags : "a" });
+    log     = require("fs").createWriteStream(__dirname + "/db/emails.txt", { flags : "a" }),
+    spawn   = require('child_process').spawn;
 
 /**
  * Configuration
@@ -50,6 +51,7 @@ app.post("/subscribe", function(req, res) {
   }
   
   log.write(email + "\n");
+  spawn("wget" , ["http://simple-mist-848.heroku.com/new-subscriber?email=secret_for_now"]);
   return res.json({}, 200);
 });
 
