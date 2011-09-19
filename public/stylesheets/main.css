@@ -36,7 +36,7 @@ section, footer, nav {
 .content img {
   float: left;
   height: 434px;
-  margin: 0 40px 0 -330px;
+  margin: 0 40px 30px -330px;
   width: 647px;
 }
 
