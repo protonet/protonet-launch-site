@@ -1,6 +1,7 @@
 /**
  * Module dependencies.
  */
+require.paths.unshift("/usr/local/lib/node_modules/");
 
 var express = require("express"),
     app     = module.exports = express.createServer(),
