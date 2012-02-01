@@ -1,10 +1,8 @@
 /**
  * Module dependencies.
  */
-require.paths.unshift("/usr/local/lib/node_modules/");
 
 var express = require("express"),
-    gzippo  = require("gzippo"),
     app     = module.exports = express.createServer(),
     log     = require("fs").createWriteStream(__dirname + "/db/emails.txt", { flags : "a" }),
     spawn   = require('child_process').spawn;
@@ -26,7 +24,7 @@ app.configure("development", function(){
 });
 
 app.configure("production", function(){
-  app.use(gzippo.staticGzip(__dirname + '/public'));
+  app.use(require("gzippo").staticGzip(__dirname + '/public'));
   app.use(express.errorHandler());
 });
 
