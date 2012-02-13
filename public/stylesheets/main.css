@@ -172,12 +172,17 @@ nav a[href*=github] {
 }
 
 ul {
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 li {
   margin-bottom: 5px;
+}
+
+li a {
+  color: #000;
 }
 
 .error {
