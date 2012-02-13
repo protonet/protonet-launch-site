@@ -172,58 +172,12 @@ nav a[href*=github] {
 }
 
 ul {
-  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 li {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-
-li a {
-  margin-right: 10px;
-  -webkit-box-shadow: -2px 2px 2px #666;
-  -moz-box-shadow: -2px 2px 2px #666;
-  box-shadow: -2px 2px 2px #666;
-  border: 1px solid #eee;
-  background: #999 url(/images/spr_video_thumbs.jpg) no-repeat;
-  display: inline-block;
-  height: 100px;
-  overflow: hidden;
-  position: relative;
-  text-indent: -9999px;
-  width: 133px;
-}
-
-li a:after {
-  background: url(/images/icn_play.png);
-  content: "";
-  height: 40px;
-  opacity: 0.7;
-  top: 50%;
-  left: 50%;
-  margin: -20px 0 0 -20px;
-  position: absolute;
-  width: 40px;
-}
-
-li a:hover:after {
-  opacity: 1;
-}
-
-li a:active {
-  -webkit-box-shadow: -1px 1px 1px #666;
-  -moz-box-shadow: -1px 1px 1px #666;
-  box-shadow: -1px 1px 1px #666;
-  left: -1px;
-  bottom: -1px;
-}
-
-li a[href*="29049923"] {
-  background-position: -133px 0;
+  margin-bottom: 5px;
 }
 
 .error {
