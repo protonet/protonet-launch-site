@@ -58,5 +58,9 @@ app.get("/rss", function(req, res) {
   res.redirect("http://protonet.tumblr.com/rss");
 });
 
+app.get("/cebit2012", function(req, res) {
+  res.redirect("http://protonet.info/cebit2012.pdf");
+});
+
 app.listen(app.settings.env === "production" ? 80 : 3001);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
